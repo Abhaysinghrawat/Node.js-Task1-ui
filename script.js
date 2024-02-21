@@ -16,7 +16,8 @@ form.addEventListener('submit', async function (event) {
         });
         const responseData = await response;
         if(responseData.status === 201)
-        console.log('User registered successfully:', responseData);
+        Alert('User registered successfully');
+        form.reset();
     } catch (error) {
         console.error('Error registering user:', error.message);
     }
